@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var number = 0
+    
     //I added this comment
 
-
+    //hello this is a test
+    
+    
 }
 
