@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>394798726487-8oou6ll67rlmquaqm2n9u6mrce3qvgq7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.394798726487-8oou6ll67rlmquaqm2n9u6mrce3qvgq7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD1bEnGpvDyqxMrbUVr4b2UiAkGuDsv0ck</string>
+	<key>GCM_SENDER_ID</key>
+	<string>394798726487</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.raphaellim.cameraApp</string>
+	<key>PROJECT_ID</key>
+	<string>cameraapp-349e9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cameraapp-349e9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:394798726487:ios:a6f04f2552111f1c</string>
+	<key>DATABASE_URL</key>
+	<string>https://cameraapp-349e9.firebaseio.com</string>
+</dict>
+</plist>

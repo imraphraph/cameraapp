@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+<<<<<<< HEAD
         
         FIRApp.configure()
         
@@ -31,6 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = tabBarController
             
         }
+=======
+        FIRApp.configure()
+        // Override point for customization after application launch.
+
+>>>>>>> 94420d7cb502f4515bfb0bd8e115138e7a7b36c2
         return true
     }
 
