@@ -20,6 +20,10 @@
 		B52825021D8146F500252A52 /* LiveFeedTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */; };
 		B52825041D81470300252A52 /* ProfileTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825031D81470300252A52 /* ProfileTabPage.storyboard */; };
 		B52825081D8147DF00252A52 /* SearchTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825071D8147DF00252A52 /* SearchTabPage.storyboard */; };
+		B55463241D816AF900502E05 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463231D816AF900502E05 /* CreateAccountViewController.swift */; };
+		B55463261D816D2F00502E05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B55463251D816D2F00502E05 /* GoogleService-Info.plist */; };
+		B55463281D82633B00502E05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463271D82633B00502E05 /* User.swift */; };
+		B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */; };
 		DD38CE04B779B16504CF5760 /* Pods_cameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C2CD8786FE9A6A302F7DD2 /* Pods_cameraApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveFeedTabPage.storyboard; sourceTree = "<group>"; };
 		B52825031D81470300252A52 /* ProfileTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileTabPage.storyboard; sourceTree = "<group>"; };
 		B52825071D8147DF00252A52 /* SearchTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTabPage.storyboard; sourceTree = "<group>"; };
+		B55463231D816AF900502E05 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B55463251D816D2F00502E05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B55463271D82633B00502E05 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		E6A3C9A1E389C3852EBBB489 /* Pods-cameraApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cameraApp/Pods-cameraApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				B52824E21D81096C00252A52 /* AppDelegate.swift */,
+				B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */,
 				B52824E41D81096C00252A52 /* LoginViewController.swift */,
-				11070B9E1D825F0300A05691 /* GoogleService-Info.plist */,
+				B55463231D816AF900502E05 /* CreateAccountViewController.swift */,
+				B55463271D82633B00502E05 /* User.swift */,
 				B52824E61D81096C00252A52 /* Main.storyboard */,
 				B52824FD1D8144EC00252A52 /* HomeTabPage.storyboard */,
 				B52824FF1D8146D400252A52 /* CameraTabPage.storyboard */,
@@ -96,6 +106,7 @@
 				B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */,
 				B52825031D81470300252A52 /* ProfileTabPage.storyboard */,
 				B52825071D8147DF00252A52 /* SearchTabPage.storyboard */,
+				B55463251D816D2F00502E05 /* GoogleService-Info.plist */,
 				B52824EC1D81096C00252A52 /* Assets.xcassets */,
 				B52824EE1D81096C00252A52 /* LaunchScreen.storyboard */,
 				B52824F11D81096C00252A52 /* Info.plist */,
@@ -241,9 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55463241D816AF900502E05 /* CreateAccountViewController.swift in Sources */,
 				B52824E51D81096C00252A52 /* LoginViewController.swift in Sources */,
+				B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */,
 				11A01B9B1D81592D000FCE4B /* CameraViewController.swift in Sources */,
 				B52824EB1D81096C00252A52 /* cameraApp.xcdatamodeld in Sources */,
+				B55463281D82633B00502E05 /* User.swift in Sources */,
 				B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
