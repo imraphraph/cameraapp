@@ -21,7 +21,6 @@
 		B52825041D81470300252A52 /* ProfileTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825031D81470300252A52 /* ProfileTabPage.storyboard */; };
 		B52825081D8147DF00252A52 /* SearchTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825071D8147DF00252A52 /* SearchTabPage.storyboard */; };
 		B55463241D816AF900502E05 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463231D816AF900502E05 /* CreateAccountViewController.swift */; };
-		B55463261D816D2F00502E05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B55463251D816D2F00502E05 /* GoogleService-Info.plist */; };
 		B55463281D82633B00502E05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463271D82633B00502E05 /* User.swift */; };
 		B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */; };
 		DD38CE04B779B16504CF5760 /* Pods_cameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C2CD8786FE9A6A302F7DD2 /* Pods_cameraApp.framework */; };
@@ -158,7 +157,7 @@
 				TargetAttributes = {
 					B52824DE1D81096C00252A52 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = YXSP9UQVE9;
+						DevelopmentTeam = F35T3HFQ4T;
 					};
 				};
 			};

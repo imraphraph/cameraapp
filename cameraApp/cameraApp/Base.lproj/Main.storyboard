@@ -57,11 +57,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_bg" translatesAutoresizingMaskIntoConstraints="NO" id="iAw-Lc-na7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo_bg" translatesAutoresizingMaskIntoConstraints="NO" id="iAw-Lc-na7">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.68351194371727741" green="0.66211534041326192" blue="0.64366287438448699" alpha="0.32111591312056736" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-FL-IBc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-FL-IBc">
                                 <rect key="frame" x="110" y="143" width="381" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="381" id="529-uV-V66"/>
@@ -78,7 +78,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Asp-ab-o7c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Asp-ab-o7c">
                                 <rect key="frame" x="178" y="243" width="244" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LV8-eW-XMJ"/>
@@ -87,7 +87,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x00-tH-gG2">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x00-tH-gG2">
                                 <rect key="frame" x="178" y="326" width="244" height="30"/>
                                 <color key="backgroundColor" red="0.47343503015151217" green="0.70867459385586695" blue="0.61103147804629798" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -101,7 +101,7 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GwV-cg-541"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fe1-hz-wYY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fe1-hz-wYY">
                                 <rect key="frame" x="239" y="413" width="123" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Iev-Mh-DyK"/>
@@ -121,7 +121,7 @@
                                     <segue destination="JDi-Gl-j01" kind="presentation" id="c0Q-3K-umk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-Lr-Fks">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-Lr-Fks">
                                 <rect key="frame" x="237" y="375" width="127" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="AOh-5w-zaM"/>
@@ -141,7 +141,7 @@
                                     <segue destination="kkj-Xo-qd9" kind="presentation" id="p8L-sU-qNc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-9K-TCz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-9K-TCz">
                                 <rect key="frame" x="178" y="288" width="244" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="47U-97-6UQ"/>
@@ -425,7 +425,7 @@
         <!--Home Tab Bar-->
         <scene sceneID="Mc7-OD-hHa">
             <objects>
-                <tabBarController id="0pN-Xv-GnJ" customClass="HomeTabBar" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeBar" id="0pN-Xv-GnJ" customClass="HomeTabBar" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="EEd-Mm-hx3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -540,7 +540,7 @@
         <!--HomeTab-->
         <scene sceneID="u2j-S2-bo5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aBP-ti-hjc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeTab" automaticallyAdjustsScrollViewInsets="NO" id="aBP-ti-hjc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HomeTab" id="Xex-Jy-gj9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIS-Ac-kzG">
