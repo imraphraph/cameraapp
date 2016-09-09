@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A48F96171D8254DA009FD96D /* HomeTabBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F96161D8254D9009FD96D /* HomeTabBarTableViewController.swift */; };
+		A48F96231D828770009FD96D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48F96221D828770009FD96D /* GoogleService-Info.plist */; };
+		A48F96251D829633009FD96D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F96241D829633009FD96D /* User.swift */; };
+		A48F96271D8298B8009FD96D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F96261D8298B8009FD96D /* Users.swift */; };
 		B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52824E21D81096C00252A52 /* AppDelegate.swift */; };
 		B52824E51D81096C00252A52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52824E41D81096C00252A52 /* LoginViewController.swift */; };
 		B52824E81D81096C00252A52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52824E61D81096C00252A52 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 /* Begin PBXFileReference section */
 		7E3D340463228AF6F0473813 /* Pods-cameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-cameraApp/Pods-cameraApp.release.xcconfig"; sourceTree = "<group>"; };
 		83C2CD8786FE9A6A302F7DD2 /* Pods_cameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A48F96161D8254D9009FD96D /* HomeTabBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarTableViewController.swift; sourceTree = "<group>"; };
+		A48F96221D828770009FD96D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A48F96241D829633009FD96D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A48F96261D8298B8009FD96D /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		B52824DF1D81096C00252A52 /* cameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52824E21D81096C00252A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B52824E41D81096C00252A52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,9 +91,13 @@
 			isa = PBXGroup;
 			children = (
 				B52824E21D81096C00252A52 /* AppDelegate.swift */,
+				A48F96161D8254D9009FD96D /* HomeTabBarTableViewController.swift */,
+				A48F96261D8298B8009FD96D /* Users.swift */,
+				A48F96241D829633009FD96D /* User.swift */,
 				B52824E41D81096C00252A52 /* LoginViewController.swift */,
 				B52824E61D81096C00252A52 /* Main.storyboard */,
 				B52824FD1D8144EC00252A52 /* HomeTabPage.storyboard */,
+				A48F96221D828770009FD96D /* GoogleService-Info.plist */,
 				B52824FF1D8146D400252A52 /* CameraTabPage.storyboard */,
 				B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */,
 				B52825031D81470300252A52 /* ProfileTabPage.storyboard */,
@@ -169,6 +181,7 @@
 			files = (
 				B52824F01D81096C00252A52 /* LaunchScreen.storyboard in Resources */,
 				B52825081D8147DF00252A52 /* SearchTabPage.storyboard in Resources */,
+				A48F96231D828770009FD96D /* GoogleService-Info.plist in Resources */,
 				B52825001D8146D400252A52 /* CameraTabPage.storyboard in Resources */,
 				B52824ED1D81096C00252A52 /* Assets.xcassets in Resources */,
 				B52825021D8146F500252A52 /* LiveFeedTabPage.storyboard in Resources */,
@@ -235,6 +248,9 @@
 			files = (
 				B52824E51D81096C00252A52 /* LoginViewController.swift in Sources */,
 				B52824EB1D81096C00252A52 /* cameraApp.xcdatamodeld in Sources */,
+				A48F96171D8254DA009FD96D /* HomeTabBarTableViewController.swift in Sources */,
+				A48F96251D829633009FD96D /* User.swift in Sources */,
+				A48F96271D8298B8009FD96D /* Users.swift in Sources */,
 				B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

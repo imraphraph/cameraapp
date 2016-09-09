@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="chF-v4-Ffo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0pN-Xv-GnJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -71,11 +71,11 @@
         <scene sceneID="OwG-LH-SzR">
             <objects>
                 <viewControllerPlaceholder storyboardName="HomeTabPage" id="io3-XE-tYv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HomeTab" id="Xex-Jy-gj9"/>
+                    <navigationItem key="navigationItem" id="O2T-vm-ctL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PrW-UA-oGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2324.5" y="62"/>
+            <point key="canvasLocation" x="3136.5" y="62"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="Mc7-OD-hHa">
@@ -87,7 +87,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="io3-XE-tYv" kind="relationship" relationship="viewControllers" id="BGu-68-rDp"/>
+                        <segue destination="2zF-3g-o35" kind="relationship" relationship="viewControllers" id="BGu-68-rDp"/>
                         <segue destination="WyM-mD-4NN" kind="relationship" relationship="viewControllers" id="t5M-hT-tpN"/>
                         <segue destination="LuU-yI-09e" kind="relationship" relationship="viewControllers" id="eUl-FN-bHP"/>
                         <segue destination="YsX-8C-fG5" kind="relationship" relationship="viewControllers" id="jId-dk-Ert"/>
@@ -115,6 +115,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNw-YQ-LiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="264" y="372"/>
+        </scene>
+        <!--HomeTab-->
+        <scene sceneID="KVs-AJ-3xa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2zF-3g-o35" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="HomeTab" id="Xex-Jy-gj9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HeM-ba-t2u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="io3-XE-tYv" kind="relationship" relationship="rootViewController" id="Is1-CF-6cz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwv-Nq-Fsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2497" y="-94"/>
         </scene>
     </scenes>
 </document>
