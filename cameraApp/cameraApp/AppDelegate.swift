@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FIRApp.configure()
+        
+        // if this key exist in userDefault
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey("userUID") as? String{
+            
+            // load storyboard
+            let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            // load view controller with the storyboardID of HomeTabBarController
+            let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("HomeTabBarController")
+            
+            self.window?.rootViewController = tabBarController
+            
+        }
         return true
     }
 
