@@ -14,6 +14,7 @@ class Image :NSObject {
     var time: Double?
     var imgurl: String?
     var username: String?
+    var caption: String?
     
     init?(snapshot: FIRDataSnapshot){
         
@@ -36,5 +37,14 @@ class Image :NSObject {
         }else{
             self.username = ""
         }
+        
+        if let dictCaption = dict["caption"] as? String{
+            self.caption = dictCaption
+        }else{
+            self.caption = ""
+        }
+        
     }
+    
+    
 }

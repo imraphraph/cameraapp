@@ -46,6 +46,7 @@ class HomeTabBarTableViewController: UITableViewController {
         let user = listOfImages[indexPath.row]
         
         cell.nameLabelText.text = user.username
+        cell.captionLabel.text = user.caption
         
         if let userImageUrl = user.imgurl{
                         
