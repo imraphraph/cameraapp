@@ -11,7 +11,6 @@
 		117546AE1D82B13100C9E934 /* HomeTabBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546AD1D82B13100C9E934 /* HomeTabBarTableViewController.swift */; };
 		117546B21D87A2CA00C9E934 /* StaticHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546B11D87A2CA00C9E934 /* StaticHomeCell.swift */; };
 		117546B61D87C7ED00C9E934 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546B51D87C7ED00C9E934 /* Image.swift */; };
-		117546B81D87DAB500C9E934 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546B71D87DAB500C9E934 /* DataService.swift */; };
 		117546BC1D88EBA200C9E934 /* ImageCaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546BB1D88EBA200C9E934 /* ImageCaptionViewController.swift */; };
 		11A01B9B1D81592D000FCE4B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A01B9A1D81592D000FCE4B /* CameraViewController.swift */; };
 		A48F96311D86624B009FD96D /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F96301D86624B009FD96D /* HomePageViewController.swift */; };
@@ -40,7 +39,6 @@
 		117546AD1D82B13100C9E934 /* HomeTabBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarTableViewController.swift; sourceTree = "<group>"; };
 		117546B11D87A2CA00C9E934 /* StaticHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHomeCell.swift; sourceTree = "<group>"; };
 		117546B51D87C7ED00C9E934 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		117546B71D87DAB500C9E934 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		117546BB1D88EBA200C9E934 /* ImageCaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptionViewController.swift; sourceTree = "<group>"; };
 		11A01B9A1D81592D000FCE4B /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		7E3D340463228AF6F0473813 /* Pods-cameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-cameraApp/Pods-cameraApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +181,7 @@
 				TargetAttributes = {
 					B52824DE1D81096C00252A52 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = F35T3HFQ4T;
+						DevelopmentTeam = YXSP9UQVE9;
 					};
 				};
 			};
