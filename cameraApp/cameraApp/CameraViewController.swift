@@ -11,22 +11,30 @@ import Fusuma
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
+import SDWebImage
 
 class CameraViewController: UIViewController, FusumaDelegate {
-
-    @IBOutlet weak var imageView: UIImageView!
     
     var base64String: NSString!
-    
+    var cameraShown:Bool = false
+    var tempImage = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fusuma = FusumaViewController()
-        fusuma.delegate = self
-        fusuma.hasVideo = true // If you want to let the users allow to use video.
-        self.presentViewController(fusuma, animated: true, completion: nil)
+
         
-        
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        if !cameraShown{
+            let fusuma = FusumaViewController()
+            fusuma.delegate = self
+            fusuma.hasVideo = true // If you want to let the users allow to use video.
+            self.presentViewController(fusuma, animated: true, completion: {
+                self.cameraShown = true
+            })
+        }
     }
     
     
@@ -34,40 +42,36 @@ class CameraViewController: UIViewController, FusumaDelegate {
         
         print("Image selected")
         
+        self.tempImage = image
         
+//        let uniqueImageName = NSUUID().UUIDString
+//        let storageRef = FIRStorage.storage().reference().child("\(uniqueImageName).png")
+//        
+//        let selectedImage = UIImagePNGRepresentation(image)!
+//            storageRef.putData(selectedImage, metadata: nil, completion: { (metadata, error) in
+//                if error != nil{
+//                    print(error)
+//                    return
+//                }
+//                
+//                
+//                let currentUserRef = DataService.imageRef.childByAutoId()
+//                if let imageURL = metadata?.downloadURL()?.absoluteString, user = User.currentUserUid(){
+//                    let value = ["imgurl":imageURL, "userUID":user, "created_at":NSDate().timeIntervalSince1970]
+//                    currentUserRef.setValue(value)
+//                    
+//                    
+//                     FIRDatabase.database().reference().child("users").child(user).child("images").updateChildValues([currentUserRef.key: true])
+//                    
+//                    SDImageCache.sharedImageCache().storeImage(image, forKey: imageURL)
+//                }
+//               
+//                
+//            })
+        //performSegueWithIdentifier("unwindToHomeTabBar", sender: self)
+        performSegueWithIdentifier("imageCaptionSegue", sender: self)        
+        self.cameraShown = false
         
-//        let uniqueImgName = NSUID().UUIDString
-        let storageRef = FIRStorage.storage().reference().child("test.png")
-        
-        let selectedImage = UIImagePNGRepresentation(image)!
-            storageRef.putData(selectedImage, metadata: nil, completion: { (metadata, error) in
-                if error != nil{
-                    print(error)
-                    return
-                }
-                
-                
-                let ref = FIRDatabase.database().reference()
-                let currentUserRef = ref.child("images").childByAutoId()
-                if let imageURL = metadata?.downloadURL()?.absoluteString{
-                    let value = ["imgurl":imageURL]
-                    currentUserRef.setValue(value)
-                    
-                }
-                
-            })
-        
-//        storageRef.dataWithMaxSize(25 * 1024 * 1024, completion: { (data, error) -> Void in
-//            let image = UIImage(data: data!)
-//            self.imageView.image = image!
-        
-            //store in array to display
-//            self.messages.append(chatMessage)
-//            self.tableView.reloadData()
-//            self.scrollToBottom()
-//        })
-        
-    
     }
     
     // Return the image but called after is dismissed.
@@ -89,7 +93,17 @@ class CameraViewController: UIViewController, FusumaDelegate {
     }
     
     func fusumaClosed() {
-        print("go home")
+
+        performSegueWithIdentifier("unwindToHomeTabBar", sender: self)
+        self.cameraShown = false
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "imageCaptionSegue"){
+        let nextScene =  segue.destinationViewController as! ImageCaptionViewController
+        nextScene.selectedImage = self.tempImage
+        }
     }
     
 

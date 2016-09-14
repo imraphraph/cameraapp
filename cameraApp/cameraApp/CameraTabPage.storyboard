@@ -16,29 +16,74 @@
                     <view key="view" contentMode="scaleToFill" id="4Jw-4F-IDC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FxX-i1-GfL">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Jzy-qh-kRk"/>
-                                    <constraint firstAttribute="width" constant="240" id="Xok-JM-KsD"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FxX-i1-GfL" firstAttribute="centerY" secondItem="4Jw-4F-IDC" secondAttribute="centerY" id="A1t-AT-6su"/>
-                            <constraint firstItem="FxX-i1-GfL" firstAttribute="centerX" secondItem="4Jw-4F-IDC" secondAttribute="centerX" id="Aq9-It-waC"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dc3-r8-4Ci"/>
                     <connections>
-                        <outlet property="imageView" destination="FxX-i1-GfL" id="PeR-Sz-jJu"/>
+                        <segue destination="QJU-b5-wxl" kind="show" identifier="imageCaptionSegue" id="0Gh-ln-bYg"/>
+                        <segue destination="rlp-my-oKd" kind="unwind" identifier="unwindToHomeTabBar" unwindAction="unwindToHomeTabBar:" id="HSm-sk-LNP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqS-oS-wvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rlp-my-oKd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1162" y="404"/>
+        </scene>
+        <!--Image Caption View Controller-->
+        <scene sceneID="EA8-mv-br4">
+            <objects>
+                <viewController id="QJU-b5-wxl" customClass="ImageCaptionViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ex7-zm-3fp"/>
+                        <viewControllerLayoutGuide type="bottom" id="9sE-Hz-1pl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QRq-K7-3eh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uLW-th-XHD">
+                                <rect key="frame" x="123" y="67" width="353" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="353" id="4fi-rR-zdO"/>
+                                    <constraint firstAttribute="height" constant="232" id="yhT-Jm-chq"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-1E-yAc">
+                                <rect key="frame" x="175" y="329" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="esL-rv-bGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxg-oL-f3A">
+                                <rect key="frame" x="282" y="387" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onDoneButtonPressed:" destination="QJU-b5-wxl" eventType="touchUpInside" id="3Rj-Bz-g7g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HGe-1E-yAc" firstAttribute="centerX" secondItem="QRq-K7-3eh" secondAttribute="centerX" id="QIJ-9W-uEW"/>
+                            <constraint firstItem="HGe-1E-yAc" firstAttribute="top" secondItem="uLW-th-XHD" secondAttribute="bottom" constant="30" id="Uhs-VZ-VPj"/>
+                            <constraint firstItem="uLW-th-XHD" firstAttribute="top" secondItem="ex7-zm-3fp" secondAttribute="bottom" constant="47" id="Vev-m3-myT"/>
+                            <constraint firstItem="Xxg-oL-f3A" firstAttribute="centerX" secondItem="QRq-K7-3eh" secondAttribute="centerX" id="b8E-jc-TMR"/>
+                            <constraint firstItem="uLW-th-XHD" firstAttribute="centerX" secondItem="QRq-K7-3eh" secondAttribute="centerX" id="f5d-gn-atP"/>
+                            <constraint firstItem="Xxg-oL-f3A" firstAttribute="top" secondItem="HGe-1E-yAc" secondAttribute="bottom" constant="28" id="hD1-kw-gQF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captionTextField" destination="HGe-1E-yAc" id="70s-ny-4Zz"/>
+                        <outlet property="imageView" destination="uLW-th-XHD" id="yQg-Ba-Bd2"/>
+                        <segue destination="mQ1-bK-fFp" kind="unwind" identifier="unwindToHomeTabBar" unwindAction="unwindToHomeTabBar:" id="1B2-61-xge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2x-YS-Chm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mQ1-bK-fFp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1831" y="404"/>
         </scene>
     </scenes>
 </document>
