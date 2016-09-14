@@ -54,39 +54,39 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
 //______________________________________(Loading profile pic, username and subtitle)________________________________________
     
     override func viewDidAppear(animated: Bool) {
+        
         super.viewDidAppear(animated)
+        
         FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            // get user information as Dictionary
-            let userDictionary: [String:String]? = snapshot.value as? [String:String]
-            
-            // get profilePicture
-            if let profileImage = userDictionary!["profilePicture"]{
-                let url = NSURL(string:profileImage)
-                NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {
-                    (data, response, error)in
+                // get user information as Dictionary
+                let userDictionary: [String:AnyObject]? = snapshot.value as? [String:AnyObject]
+                
+                // get profilePicture
+                if let profileImage = userDictionary?["profilePicture"] as? String {
                     
-                    if error != nil{
-                        print(error)
-                        return
-                    }
-                    
-                    let image = UIImage(data: data!)
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.profileImageView.image = image
-                    })
-                    
-                }).resume()
-            }else{
-            return
-            }
-            
-            //get username
-            self.username = userDictionary?["username"]
-            self.nameTextField.text = self.username
-            
-            self.subtitle = userDictionary?["subtitle"]
-            self.titleTextField.text = self.subtitle
+                    let url = NSURL(string:profileImage)
+                    NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {
+                        (data, response, error) in
+                        
+                        if error != nil{
+                            print(error)
+                            return
+                        }
+                        
+                        let image = UIImage(data: data!)
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.profileImageView.image = image
+                        })
+                        
+                    }).resume()
+                }
+                //get username
+                self.username = userDictionary?["username"] as? String
+                self.nameTextField.text = self.username
+                
+                self.subtitle = userDictionary?["subtitle"] as? String
+                self.titleTextField.text = self.subtitle
             
         })
 
