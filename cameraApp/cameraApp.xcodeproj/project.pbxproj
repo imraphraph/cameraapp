@@ -30,6 +30,8 @@
 		B55463241D816AF900502E05 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463231D816AF900502E05 /* CreateAccountViewController.swift */; };
 		B55463281D82633B00502E05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463271D82633B00502E05 /* User.swift */; };
 		B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */; };
+		B5A721D41D87929B00D5BBC8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A721D31D87929B00D5BBC8 /* SettingsViewController.swift */; };
+		B5EE8E961D82BB640026C38B /* ProfileTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EE8E951D82BB640026C38B /* ProfileTabPageViewController.swift */; };
 		DD38CE04B779B16504CF5760 /* Pods_cameraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C2CD8786FE9A6A302F7DD2 /* Pods_cameraApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		B55463251D816D2F00502E05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B55463271D82633B00502E05 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B5A721D31D87929B00D5BBC8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B5EE8E951D82BB640026C38B /* ProfileTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabPageViewController.swift; sourceTree = "<group>"; };
 		E6A3C9A1E389C3852EBBB489 /* Pods-cameraApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cameraApp/Pods-cameraApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +128,8 @@
 				11A01B9A1D81592D000FCE4B /* CameraViewController.swift */,
 				B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */,
 				B52825031D81470300252A52 /* ProfileTabPage.storyboard */,
+				B5A721D31D87929B00D5BBC8 /* SettingsViewController.swift */,
+				B5EE8E951D82BB640026C38B /* ProfileTabPageViewController.swift */,
 				B52825071D8147DF00252A52 /* SearchTabPage.storyboard */,
 				B55463251D816D2F00502E05 /* GoogleService-Info.plist */,
 				B52824EC1D81096C00252A52 /* Assets.xcassets */,
@@ -177,7 +183,7 @@
 				TargetAttributes = {
 					B52824DE1D81096C00252A52 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = YXSP9UQVE9;
+						DevelopmentTeam = F35T3HFQ4T;
 					};
 				};
 			};
@@ -279,10 +285,12 @@
 				117546AE1D82B13100C9E934 /* HomeTabBarTableViewController.swift in Sources */,
 				B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */,
 				11A01B9B1D81592D000FCE4B /* CameraViewController.swift in Sources */,
-				A48F96311D86624B009FD96D /* HomePageViewController.swift in Sources */,
+				B5EE8E961D82BB640026C38B /* ProfileTabPageViewController.swift in Sources */,
 				B52824EB1D81096C00252A52 /* cameraApp.xcdatamodeld in Sources */,
 				B55463281D82633B00502E05 /* User.swift in Sources */,
 				B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */,
+				B5A721D41D87929B00D5BBC8 /* SettingsViewController.swift in Sources */,
+				A48F96311D86624B009FD96D /* HomePageViewController.swift in Sources */,
 				117546B61D87C7ED00C9E934 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
