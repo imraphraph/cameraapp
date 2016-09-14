@@ -9,6 +9,28 @@
 import Foundation
 
 class User :NSObject {
+    
+    class func loadUserProfileImage (){
+    
+//        if let profileImageUrl = ProfileTabPageViewController.imageURL {
+//        
+//            let url = NSURl(string:profileImageUrl)
+//            
+//            NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {
+//            (data, response, error)in
+//            
+//                if error != nil{
+//                print(error)
+//                    return
+//                }
+//                
+//            })
+//            
+//        }
+        
+            
+        
+    }
 
 class func signIn (uid: String){
     //storing the uid of the person in the phone's default settings.

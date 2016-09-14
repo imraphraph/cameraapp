@@ -48,7 +48,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -483,6 +483,7 @@
         <!--Profile-->
         <scene sceneID="ZUh-Ah-joN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PV0-Um-rIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ke-wp-Ueb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="gPH-XH-OKB"/>
                     <toolbarItems/>
@@ -495,9 +496,8 @@
                         <segue destination="MeP-vC-bdR" kind="relationship" relationship="rootViewController" id="Btp-TE-sGf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PV0-Um-rIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="2260"/>
+            <point key="canvasLocation" x="2005" y="2312"/>
         </scene>
         <!--LiveFeed-->
         <scene sceneID="g0m-2c-KpB">
