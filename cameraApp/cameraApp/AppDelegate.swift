@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         FIRApp.configure()
 
         // if this key exist in userDefault
-        if let _ = NSUserDefaults.standardUserDefaults().objectForKey("userUID") as? String{
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey("uid") as? String{
 
             // load storyboard
             let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
