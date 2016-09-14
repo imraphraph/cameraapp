@@ -61,23 +61,25 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
             let userDictionary: [String:String]? = snapshot.value as? [String:String]
             
             // get profilePicture
-            self.profileImageUrl = userDictionary!["profilePicture"];
-            let url = NSURL(string:self.profileImageUrl!)
-            NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {
-                (data, response, error)in
-                
-                if error != nil{
-                    print(error)
-                    return
-                }
-                
-                let image = UIImage(data: data!)
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.profileImageView.image = image
-                })
-                
-                
-            }).resume()
+            if let profileImage = userDictionary!["profilePicture"]{
+                let url = NSURL(string:profileImage)
+                NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {
+                    (data, response, error)in
+                    
+                    if error != nil{
+                        print(error)
+                        return
+                    }
+                    
+                    let image = UIImage(data: data!)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.profileImageView.image = image
+                    })
+                    
+                }).resume()
+            }else{
+            return
+            }
             
             //get username
             self.username = userDictionary?["username"]
