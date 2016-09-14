@@ -11,8 +11,6 @@
                 <tableViewController id="OMk-0G-woX" customClass="HomeTabBarTableViewController" customModule="cameraApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="416" sectionHeaderHeight="28" sectionFooterHeight="28" id="q5u-0G-kDU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="416" id="ihe-4q-jUe" customClass="StaticHomeCell" customModule="cameraApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="416"/>
