@@ -19,7 +19,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
       
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ForgotPasswordViewController.dismissKeyboard)))
         
     }
     

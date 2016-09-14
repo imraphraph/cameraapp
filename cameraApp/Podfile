@@ -12,5 +12,6 @@ target 'cameraApp' do
   pod ‘Firebase/Auth’
   pod 'Firebase/Storage'
   pod 'Fusuma'
+  pod 'SDWebImage'
 
 end

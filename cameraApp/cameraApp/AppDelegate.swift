@@ -11,25 +11,26 @@ import CoreData
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        FIRApp.configure()
-        // Override point for customization after application launch.
-        
-        //load storyboard this precedes viewdidload
-        let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        
-        //set the hometabbatcontoller to a variable
-        ///////////********** very important this links to the Storybaord ID not the viewcontroller itself.
-        let HomeBarController = storyBoard.instantiateViewControllerWithIdentifier("HomeBar")
-        
-        //load view controller with the storyboard ID of HomeTabBarController
-        self.window?.rootViewController = HomeBarController
 
+        FIRApp.configure()
+
+        // if this key exist in userDefault
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey("userUID") as? String{
+
+            // load storyboard
+            let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            // load view controller with the storyboardID of HomeTabBarController
+            let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("HomeTabBarController")
+
+            self.window?.rootViewController = tabBarController
+
+        }
         return true
     }
 
@@ -92,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
         }
-        
+
         return coordinator
     }()
 
@@ -121,4 +122,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

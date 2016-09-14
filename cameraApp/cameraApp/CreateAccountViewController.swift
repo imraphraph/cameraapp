@@ -27,7 +27,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         usernameInputTextField.delegate = self
         
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CreateAccountViewController.dismissKeyboard)))
         
     }
     

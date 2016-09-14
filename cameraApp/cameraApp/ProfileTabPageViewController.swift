@@ -12,7 +12,7 @@ import FirebaseStorage
 
 
 
-class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
+class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var nameTextField: UILabel!
     @IBOutlet weak var titleTextField: UILabel!
@@ -149,32 +149,32 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
         
     }
 }
-//____________________________________________(Collection View Section)______________________________________________________
-
-    let imageRef = FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).child("images")
-    var imageArray = [String]()
-//    imageRef.observeEventType(.Value, withBlock: {snapshot in
-//        imageArray = snapshot.value
-//        
-//     })
+////____________________________________________(Collection View Section)______________________________________________________
 //
-//func callImages(<#parameters#>) -> <#return type#> {
-//    <#function body#>
-//}
-
-
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
+//    let imageRef = FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).child("images")
+//    var imageArray = [String]()
+////    imageRef.observeEventType(.Value, withBlock: {snapshot in
+////        imageArray = snapshot.value
+////        
+////     })
+////
+////func callImages(<#parameters#>) -> <#return type#> {
+////    <#function body#>
+////}
+//
+//
+//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+//        <#code#>
+//    }
+//    
 
 
 
