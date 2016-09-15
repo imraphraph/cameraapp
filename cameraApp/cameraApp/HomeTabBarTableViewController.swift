@@ -87,6 +87,7 @@ class HomeTabBarTableViewController: UITableViewController {
             let frame = cell.helloImageView.frame
             cell.helloImageView.sd_setImageWithURL(url)
             cell.helloImageView.frame = frame
+            cell.likeButton.tag = indexPath.section
         }
         
         return cell

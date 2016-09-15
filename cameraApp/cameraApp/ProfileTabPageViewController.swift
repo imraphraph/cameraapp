@@ -12,7 +12,7 @@ import FirebaseStorage
 
 
 
-class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
+class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var nameTextField: UILabel!
     @IBOutlet weak var titleTextField: UILabel!
@@ -184,7 +184,20 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
                 })
             })
     }
-
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let screenWidth = self.view.frame.size.width
+        let itemWidth = screenWidth / 3
+        return CGSizeMake(itemWidth, itemWidth)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
     
 
 
