@@ -194,11 +194,10 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
-    
+
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
-    
 
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
