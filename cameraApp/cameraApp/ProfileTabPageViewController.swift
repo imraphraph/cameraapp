@@ -107,7 +107,7 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
 
     }
     
-//____________________________________________(Uploading Profile Image)_____________________________________________________
+//________________________________________(Uploading Profile Image)_____________________________________________________
     
     func selectProfileImage () {
     let picker = UIImagePickerController ()
@@ -166,9 +166,8 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
         
     }
 
-//____________________________________________(Collection View Section)______________________________________________________
+//________________________________________(Collection View Section)______________________________________________________
 
-//    var imageArray = [String]()
     var images : [UIImage] = []
     func retrieveImageFromDatabse(){
         FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).child("images").observeEventType(.ChildAdded, withBlock: { (snapshot) in

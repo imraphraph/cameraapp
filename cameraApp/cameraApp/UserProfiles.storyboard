@@ -183,6 +183,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="feedCollectionView" destination="he2-zZ-0Jc" id="eiJ-cq-KFb"/>
                         <outlet property="profileImageView" destination="gIV-1s-boU" id="bCN-gb-lP8"/>
                         <outlet property="userNameTextView" destination="Rih-xc-JGx" id="d6c-Rj-oXx"/>
                         <outlet property="userTitleTextView" destination="Xg4-OU-lVp" id="93O-dV-MSj"/>
