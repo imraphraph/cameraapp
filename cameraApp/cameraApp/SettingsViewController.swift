@@ -10,9 +10,28 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var descriptionTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.descriptionTextField.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard)))
+    }
+    
+    func dismissKeyboard() {
+        descriptionTextField.resignFirstResponder()
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     @IBAction func settingsButton(sender: UIButton) {
         
@@ -31,6 +50,7 @@ class SettingsViewController: UIViewController {
         
         FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).child("subtitle").setValue(subtitle)
     }
+    
     
     
     
