@@ -14,6 +14,8 @@ class User{
     var email: String
     var username: String
     var images: String
+    var pImage: String
+    var subtitle : String
 
     init?(snapshot: FIRDataSnapshot){
 
@@ -35,6 +37,18 @@ class User{
             self.images = dictImage
         }else{
             self.images = ""
+        }
+        
+        if let dictPImage = dict["profilePicture"] as? String{
+            self.pImage = dictPImage
+        }else{
+            self.pImage = ""
+        }
+        
+        if let dictSubtitle = dict["subtitle"] as? String{
+            self.subtitle = dictSubtitle
+        }else{
+            self.subtitle = ""
         }
 
     }

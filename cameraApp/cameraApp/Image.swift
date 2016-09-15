@@ -15,6 +15,7 @@ class Image :NSObject {
     var imgurl: String?
     var username: String?
     var caption: String?
+    var pImage: String?
     
     init?(snapshot: FIRDataSnapshot){
         

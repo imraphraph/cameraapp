@@ -16,7 +16,6 @@ class StaticHomeCell: UITableViewCell {
     @IBOutlet weak var helloImageView: UIImageView!
 
     @IBOutlet weak var captionLabel: UILabel!
-    @IBOutlet weak var nameLabelText: UILabel!
     
     @IBAction func onLikeButtonPressed(sender: UIButton) {
         

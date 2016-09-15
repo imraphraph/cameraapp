@@ -44,31 +44,6 @@ class CameraViewController: UIViewController, FusumaDelegate {
         
         self.tempImage = image
         
-//        let uniqueImageName = NSUUID().UUIDString
-//        let storageRef = FIRStorage.storage().reference().child("\(uniqueImageName).png")
-//        
-//        let selectedImage = UIImagePNGRepresentation(image)!
-//            storageRef.putData(selectedImage, metadata: nil, completion: { (metadata, error) in
-//                if error != nil{
-//                    print(error)
-//                    return
-//                }
-//                
-//                
-//                let currentUserRef = DataService.imageRef.childByAutoId()
-//                if let imageURL = metadata?.downloadURL()?.absoluteString, user = User.currentUserUid(){
-//                    let value = ["imgurl":imageURL, "userUID":user, "created_at":NSDate().timeIntervalSince1970]
-//                    currentUserRef.setValue(value)
-//                    
-//                    
-//                     FIRDatabase.database().reference().child("users").child(user).child("images").updateChildValues([currentUserRef.key: true])
-//                    
-//                    SDImageCache.sharedImageCache().storeImage(image, forKey: imageURL)
-//                }
-//               
-//                
-//            })
-        //performSegueWithIdentifier("unwindToHomeTabBar", sender: self)
         performSegueWithIdentifier("imageCaptionSegue", sender: self)        
         self.cameraShown = false
         
