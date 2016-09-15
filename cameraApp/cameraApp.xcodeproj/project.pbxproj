@@ -26,6 +26,8 @@
 		B52825021D8146F500252A52 /* LiveFeedTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */; };
 		B52825041D81470300252A52 /* ProfileTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825031D81470300252A52 /* ProfileTabPage.storyboard */; };
 		B52825081D8147DF00252A52 /* SearchTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825071D8147DF00252A52 /* SearchTabPage.storyboard */; };
+		B528C13E1D8A7DDB008D7A8E /* UserProfiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B528C13D1D8A7DDB008D7A8E /* UserProfiles.storyboard */; };
+		B528C1401D8A8165008D7A8E /* UserProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B528C13F1D8A8165008D7A8E /* UserProfilesViewController.swift */; };
 		B55463241D816AF900502E05 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463231D816AF900502E05 /* CreateAccountViewController.swift */; };
 		B55463281D82633B00502E05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463271D82633B00502E05 /* User.swift */; };
 		B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */; };
@@ -58,6 +60,8 @@
 		B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveFeedTabPage.storyboard; sourceTree = "<group>"; };
 		B52825031D81470300252A52 /* ProfileTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileTabPage.storyboard; sourceTree = "<group>"; };
 		B52825071D8147DF00252A52 /* SearchTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTabPage.storyboard; sourceTree = "<group>"; };
+		B528C13D1D8A7DDB008D7A8E /* UserProfiles.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfiles.storyboard; sourceTree = "<group>"; };
+		B528C13F1D8A8165008D7A8E /* UserProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilesViewController.swift; sourceTree = "<group>"; };
 		B55463231D816AF900502E05 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B55463251D816D2F00502E05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B55463271D82633B00502E05 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -127,8 +131,10 @@
 				B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */,
 				B52825071D8147DF00252A52 /* SearchTabPage.storyboard */,
 				B52825031D81470300252A52 /* ProfileTabPage.storyboard */,
+				B528C13D1D8A7DDB008D7A8E /* UserProfiles.storyboard */,
 				B5A721D31D87929B00D5BBC8 /* SettingsViewController.swift */,
 				B5EE8E951D82BB640026C38B /* ProfileTabPageViewController.swift */,
+				B528C13F1D8A8165008D7A8E /* UserProfilesViewController.swift */,
 				B55463251D816D2F00502E05 /* GoogleService-Info.plist */,
 				B52824EC1D81096C00252A52 /* Assets.xcassets */,
 				B52824EE1D81096C00252A52 /* LaunchScreen.storyboard */,
@@ -221,6 +227,7 @@
 				11070B9F1D825F0300A05691 /* GoogleService-Info.plist in Resources */,
 				B52825001D8146D400252A52 /* CameraTabPage.storyboard in Resources */,
 				B52824ED1D81096C00252A52 /* Assets.xcassets in Resources */,
+				B528C13E1D8A7DDB008D7A8E /* UserProfiles.storyboard in Resources */,
 				B52825021D8146F500252A52 /* LiveFeedTabPage.storyboard in Resources */,
 				B52824FE1D8144EC00252A52 /* HomeTabPage.storyboard in Resources */,
 				B52824E81D81096C00252A52 /* Main.storyboard in Resources */,
@@ -293,6 +300,7 @@
 				11A01B9B1D81592D000FCE4B /* CameraViewController.swift in Sources */,
 				B5EE8E961D82BB640026C38B /* ProfileTabPageViewController.swift in Sources */,
 				B52824EB1D81096C00252A52 /* cameraApp.xcdatamodeld in Sources */,
+				B528C1401D8A8165008D7A8E /* UserProfilesViewController.swift in Sources */,
 				B55463281D82633B00502E05 /* User.swift in Sources */,
 				B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */,
 				B5A721D41D87929B00D5BBC8 /* SettingsViewController.swift in Sources */,
