@@ -32,22 +32,40 @@
                                     <constraint firstAttribute="height" constant="308" id="ayA-ee-PAp"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="obO-A5-gX8">
-                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HmT-1c-kpS">
-                                        <rect key="frame" x="8" y="8" width="200" height="200"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="HmT-1c-kpS" customClass="ImageCell" customModule="cameraApp" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chH-MT-CVE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="chH-MT-CVE" firstAttribute="top" secondItem="HmT-1c-kpS" secondAttribute="top" id="82a-R0-whQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="chH-MT-CVE" secondAttribute="trailing" id="BeC-IC-JQO"/>
+                                            <constraint firstItem="chH-MT-CVE" firstAttribute="leading" secondItem="HmT-1c-kpS" secondAttribute="leading" id="bEq-Kz-Mfc"/>
+                                            <constraint firstAttribute="bottom" secondItem="chH-MT-CVE" secondAttribute="bottom" id="nTc-z1-6Ha"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="chH-MT-CVE" id="Obo-Y5-M7x"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="lc5-q6-233" id="r9G-ec-PK9"/>
+                                    <outlet property="delegate" destination="lc5-q6-233" id="DGv-km-sej"/>
+                                </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n5k-Ce-NdR">
                                 <rect key="frame" x="131" y="230" width="338" height="54"/>
@@ -121,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yls-Sz-we7"/>
                     <connections>
+                        <outlet property="feedCollectionView" destination="xWH-R7-gbK" id="BwD-RQ-vlI"/>
                         <outlet property="nameTextField" destination="tUt-Z7-uBe" id="NeO-Zh-wkv"/>
                         <outlet property="profileImageView" destination="rau-PX-AZO" id="TTx-6c-bM1"/>
                         <outlet property="titleTextField" destination="6Hj-M2-v7q" id="YLB-19-aPO"/>
