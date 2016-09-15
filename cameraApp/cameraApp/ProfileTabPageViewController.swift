@@ -22,6 +22,7 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
     var profileImageUrl : String?
     var username: String?
     var subtitle: String?
+    var externalUser: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectProfileImage)))
         profileImageView.userInteractionEnabled = true
 
-//_________________________________________(Loading barbutton programmatically)_____________________________________________
+//_____________________________________(Loading barbutton programmatically)_____________________________________________
         
         // set barbutton programatically
         let settingImage = UIImage(named: "Settings")
@@ -53,7 +54,19 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
     }
     
     
-//______________________________________(Loading profile pic, username and subtitle)________________________________________
+    @IBAction func followButton(sender: UIButton) {
+        
+        let controller = UIAlertController(title: "Error", message: "You can't follow yourself", preferredStyle: .Alert)
+        let dismissButton = UIAlertAction(title: "Okay", style: .Default, handler: nil)
+        
+        controller.addAction(dismissButton)
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        
+    }
+//__________________________________(Loading profile pic, username and subtitle)________________________________________
+    
     
     override func viewDidAppear(animated: Bool) {
         
