@@ -12,11 +12,12 @@ import FirebaseStorage
 
 
 
-class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var nameTextField: UILabel!
     @IBOutlet weak var titleTextField: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var feedCollectionView: UICollectionView!
     
     var profileImageUrl : String?
     var username: String?
@@ -24,7 +25,6 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectProfileImage)))
         profileImageView.userInteractionEnabled = true
@@ -46,8 +46,10 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
         // assing custom rightbarbutton on navigation item
         navigationItem.setRightBarButtonItem(customBarButton, animated: true)
         
-        
-        
+    
+        retrieveImageFromDatabse()
+//        feedCollectionView.dataSource = self
+//        feedCollectionView.delegate = self
     }
     
     
@@ -150,34 +152,58 @@ class ProfileTabPageViewController: UIViewController, UIImagePickerControllerDel
         performSegueWithIdentifier("settingSegue", sender: nil)
         
     }
-}
-////____________________________________________(Collection View Section)______________________________________________________
-//
-//    let imageRef = FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).child("images")
+
+//____________________________________________(Collection View Section)______________________________________________________
+
 //    var imageArray = [String]()
-////    imageRef.observeEventType(.Value, withBlock: {snapshot in
-////        imageArray = snapshot.value
-////        
-////     })
-////
-////func callImages(<#parameters#>) -> <#return type#> {
-////    <#function body#>
-////}
-//
-//
-//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        <#code#>
-//    }
-//    
+    var images : [UIImage] = []
+    func retrieveImageFromDatabse(){
+        FIRDatabase.database().reference().child("users").child(User.currentUserUid()!).child("images").observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            
+            FIRDatabase.database().reference().child("images").child(snapshot.key).observeSingleEventOfType(.Value, withBlock: { snapshot in
+                    guard let snapshotDictionary = snapshot.value as? [String:AnyObject] else { return }
+                    if let imageURL = snapshotDictionary["imgurl"] as? String {
+                        let url = NSURL(string:imageURL)
+                        NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {
+                            (data, response, error) in
+                            
+                            if error != nil{
+                                print(error)
+                                return
+                            }
+                            
+                            if let image = UIImage(data: data!){
+                                self.images.append(image)
+                                dispatch_async(dispatch_get_main_queue(), { 
+                                    self.feedCollectionView.reloadData()
+                                })
+                            }
+                            
+                        }).resume()
+                    }
+                })
+            })
+    }
+
+    
 
 
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("collectionCell", forIndexPath: indexPath) as! ImageCell
+        let image = images[indexPath.row]
+        cell.imageView.image = image
+        return cell
+    }
+
+
+}
 
 
