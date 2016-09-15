@@ -25,6 +25,17 @@ class ImageCaptionViewController: UIViewController {
         
         self.imageView.image = self.selectedImage
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard)))
+        
+    }
+    
+    func dismissKeyboard() {
+        captionTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func onDoneButtonPressed(sender: AnyObject) {
@@ -54,7 +65,7 @@ class ImageCaptionViewController: UIViewController {
             
         })
         performSegueWithIdentifier("unwindToHomeTabBar", sender: self)
-        //self.dismissViewControllerAnimated(true, completion: {});
+        navigationController?.popViewControllerAnimated(true)
         
         
     }

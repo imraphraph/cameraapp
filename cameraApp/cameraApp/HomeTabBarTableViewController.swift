@@ -18,12 +18,26 @@ class HomeTabBarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tableView.estimatedRowHeight = 88.0
-//        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = 385
         
         DataService.imageRef.observeEventType(.ChildAdded, withBlock: { imageSnapshot in
             if let image = Image(snapshot: imageSnapshot){
-                self.listOfImages.append(image)
+                
+                
+                DataService.userRef.child(image.username!).observeEventType(.Value, withBlock: { userSnapshot in
+                    if let user = User(snapshot: userSnapshot){
+                        image.username = user.username
+                        image.pImage = user.pImage
+                        self.listOfImages.append(image)
+
+                    }
+                })
+                
+                
+                
+                //self.listOfImages.append(image)
                 self.tableView.reloadData()
+                
             }
         })
     }
@@ -33,19 +47,38 @@ class HomeTabBarTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return self.listOfImages.count
+    }
+
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let  headerCell = tableView.dequeueReusableCellWithIdentifier("SectionCell")
+        
+        let user = self.listOfImages[section]
+        
+        headerCell?.textLabel?.text = user.username
+        
+        if let userImageUrl = user.pImage{
+            
+            let url = NSURL(string: userImageUrl)
+            
+            headerCell!.imageView!.sd_setImageWithURL(url)
+            headerCell?.imageView!.layer.cornerRadius = (headerCell?.imageView!.frame.size.width)! / 2
+            headerCell?.imageView!.clipsToBounds = true
+        }
+        
+        return headerCell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listOfImages.count
+        return 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:StaticHomeCell = tableView.dequeueReusableCellWithIdentifier("HomeCell") as! StaticHomeCell
         
-        let user = listOfImages[indexPath.row]
+        let user = listOfImages[indexPath.section]
         
-        cell.nameLabelText.text = user.username
         cell.captionLabel.text = user.caption
         
         if let userImageUrl = user.imgurl{
@@ -58,6 +91,11 @@ class HomeTabBarTableViewController: UITableViewController {
         
         return cell
     }
+
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("pressed on \(indexPath) cell")
+    }
+
     
 }
