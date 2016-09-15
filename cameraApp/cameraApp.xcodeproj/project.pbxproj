@@ -12,6 +12,7 @@
 		117546B21D87A2CA00C9E934 /* StaticHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546B11D87A2CA00C9E934 /* StaticHomeCell.swift */; };
 		117546B61D87C7ED00C9E934 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546B51D87C7ED00C9E934 /* Image.swift */; };
 		117546BC1D88EBA200C9E934 /* ImageCaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546BB1D88EBA200C9E934 /* ImageCaptionViewController.swift */; };
+		117546BE1D8A3E3900C9E934 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117546BD1D8A3E3900C9E934 /* ImageCell.swift */; };
 		11A01B9B1D81592D000FCE4B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A01B9A1D81592D000FCE4B /* CameraViewController.swift */; };
 		A48F96331D8665CC009FD96D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48F96321D8665CC009FD96D /* DataService.swift */; };
 		B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52824E21D81096C00252A52 /* AppDelegate.swift */; };
@@ -25,7 +26,6 @@
 		B52825021D8146F500252A52 /* LiveFeedTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */; };
 		B52825041D81470300252A52 /* ProfileTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825031D81470300252A52 /* ProfileTabPage.storyboard */; };
 		B52825081D8147DF00252A52 /* SearchTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52825071D8147DF00252A52 /* SearchTabPage.storyboard */; };
-		B542D31B1D8959D900AC2EAD /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B542D31A1D8959D900AC2EAD /* ImageCell.swift */; };
 		B55463241D816AF900502E05 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463231D816AF900502E05 /* CreateAccountViewController.swift */; };
 		B55463281D82633B00502E05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463271D82633B00502E05 /* User.swift */; };
 		B554632A1D82706A00502E05 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55463291D82706A00502E05 /* ForgotPasswordViewController.swift */; };
@@ -40,6 +40,7 @@
 		117546B11D87A2CA00C9E934 /* StaticHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHomeCell.swift; sourceTree = "<group>"; };
 		117546B51D87C7ED00C9E934 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		117546BB1D88EBA200C9E934 /* ImageCaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptionViewController.swift; sourceTree = "<group>"; };
+		117546BD1D8A3E3900C9E934 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		11A01B9A1D81592D000FCE4B /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		7E3D340463228AF6F0473813 /* Pods-cameraApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cameraApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-cameraApp/Pods-cameraApp.release.xcconfig"; sourceTree = "<group>"; };
 		83C2CD8786FE9A6A302F7DD2 /* Pods_cameraApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cameraApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +58,6 @@
 		B52825011D8146F500252A52 /* LiveFeedTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveFeedTabPage.storyboard; sourceTree = "<group>"; };
 		B52825031D81470300252A52 /* ProfileTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileTabPage.storyboard; sourceTree = "<group>"; };
 		B52825071D8147DF00252A52 /* SearchTabPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchTabPage.storyboard; sourceTree = "<group>"; };
-		B542D31A1D8959D900AC2EAD /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		B55463231D816AF900502E05 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B55463251D816D2F00502E05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B55463271D82633B00502E05 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		B542D3191D89591500AC2EAD /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				B542D31A1D8959D900AC2EAD /* ImageCell.swift */,
+				117546BD1D8A3E3900C9E934 /* ImageCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -297,6 +297,7 @@
 				B52824E31D81096C00252A52 /* AppDelegate.swift in Sources */,
 				B5A721D41D87929B00D5BBC8 /* SettingsViewController.swift in Sources */,
 				117546B61D87C7ED00C9E934 /* Image.swift in Sources */,
+				117546BE1D8A3E3900C9E934 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
